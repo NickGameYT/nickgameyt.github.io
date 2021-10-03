@@ -19,11 +19,11 @@ function main()
         sampAddChatMessage(state and '{808080}givermoney {ffffff} [ {19ff19}ON {ffffff}]' or '{808080}givermoney {ffffff} [ {ff6666}OFF {ffffff}]', -1)
     end)
     sampRegisterChatCommand('pod', hint_command)
-    sampAddChatMessage("{ffffff}Скрипт {19ff19}успешно {ffffff}загружен. {FFD700} Автор: {FF8C00}ng{FF0000}p{F0E68C}yt", -1)
+    sampAddChatMessage("{ffffff}Г‘ГЄГ°ГЁГЇГІ {19ff19}ГіГ±ГЇГҐГёГ­Г® {ffffff}Г§Г ГЈГ°ГіГ¦ГҐГ­. {FFD700} ГЂГўГІГ®Г°: {FF8C00}ng{FF0000}p{F0E68C}yt", -1)
     if mainIni.settings.mode == 1 then
-	  sampAddChatMessage("Специально для {FFFFFF}BLAST{87CEEB}HACK", -1)
-    sampAddChatMessage("Активация скрипта: {FFA500} /ggg", -1)
-    sampAddChatMessage("Убрать/вернуть подсказку: {FFA500} /pod", -1)
+	  sampAddChatMessage("Г‘ГЇГҐГ¶ГЁГ Г«ГјГ­Г® Г¤Г«Гї {FFFFFF}BLAST{87CEEB}HACK", -1)
+    sampAddChatMessage("ГЂГЄГІГЁГўГ Г¶ГЁГї Г±ГЄГ°ГЁГЇГІГ : {FFA500} /ggg", -1)
+    sampAddChatMessage("Г“ГЎГ°Г ГІГј/ГўГҐГ°Г­ГіГІГј ГЇГ®Г¤Г±ГЄГ Г§ГЄГі: {FFA500} /pod", -1)
   end
 
     while true do
@@ -36,11 +36,11 @@ function main()
 
         function hint_command()
           if mainIni.settings.mode == 1 then
-            sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} Подсказка была отключена", -1)
+            sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  ГЎГ»Г«Г  Г®ГІГЄГ«ГѕГ·ГҐГ­Г ", -1)
             mainIni.settings.mode = 0
             inicfg.save(mainIni, 'givemoney')
           else
-            sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} Подсказка была включена", -1)
+            sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  ГЎГ»Г«Г  ГўГЄГ«ГѕГ·ГҐГ­Г ", -1)
             mainIni.settings.mode = 1
             inicfg.save(mainIni, 'givemoney')
         end
