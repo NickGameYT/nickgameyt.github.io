@@ -1,2 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ! \.html$
+RewriteCond %{REQUEST_URI} ! /$
+RewriteRule ^(.*)$ $1.html
+
+
+
+
 ErrorDocument 404 http://nickgameyt.github.io/404.html
 AddType application/download .pdf .mp3 .lua .java .python .luac
