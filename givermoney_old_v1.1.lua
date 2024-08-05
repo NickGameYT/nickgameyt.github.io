@@ -1,5 +1,5 @@
 script_author('ngpyt')
-script_version('v1.0')
+script_version('v1.1')
 
 local sampev = require("lib.samp.events")
 local inicfg = require 'inicfg'
@@ -26,14 +26,14 @@ function main()
     sampRegisterChatCommand('gmoney', gmoney_cmd)
     sampRegisterChatCommand('gdelay', gdelay_cmd)
     sampRegisterChatCommand('credits', credits_cmd)
-    sampAddChatMessage("{ffffff}Скрипт {19ff19}успешно {ffffff}загружен. {FFD700} Автор: {FF8C00}ng{FF0000}p{F0E68C}yt", -1)
+    sampAddChatMessage("{ffffff}Г‘ГЄГ°ГЁГЇГІ {19ff19}ГіГ±ГЇГҐГёГ­Г® {ffffff}Г§Г ГЈГ°ГіГ¦ГҐГ­. {FFD700} ГЂГўГІГ®Г°: {FF8C00}ng{FF0000}p{F0E68C}yt", -1)
     if mainIni.settings.mode == 1 then
-    sampAddChatMessage("Специально для {FFFFFF}BLAST{87CEEB}HACK", -1)
-    sampAddChatMessage("Активация скрипта: {FFA500} /ggg", -1)
-    sampAddChatMessage("Задать ID игрока: {FFA500} /gid", -1)
-    sampAddChatMessage("Задать Кол-во денег: {FFA500} /gmoney", -1)
-    sampAddChatMessage("Задать задержку: {FFA500} /gdelay", -1)
-    sampAddChatMessage("Убрать/вернуть подсказку: {FFA500} /pod", -1)
+    sampAddChatMessage("Г‘ГЇГҐГ¶ГЁГ Г«ГјГ­Г® Г¤Г«Гї {FFFFFF}BLAST{87CEEB}HACK", -1)
+    sampAddChatMessage("ГЂГЄГІГЁГўГ Г¶ГЁГї Г±ГЄГ°ГЁГЇГІГ : {FFA500} /ggg", -1)
+    sampAddChatMessage("Г‡Г Г¤Г ГІГј ID ГЁГЈГ°Г®ГЄГ : {FFA500} /gid", -1)
+    sampAddChatMessage("Г‡Г Г¤Г ГІГј ГЉГ®Г«-ГўГ® Г¤ГҐГ­ГҐГЈ: {FFA500} /gmoney", -1)
+    sampAddChatMessage("Г‡Г Г¤Г ГІГј Г§Г Г¤ГҐГ°Г¦ГЄГі: {FFA500} /gdelay", -1)
+    sampAddChatMessage("Г“ГЎГ°Г ГІГј/ГўГҐГ°Г­ГіГІГј ГЇГ®Г¤Г±ГЄГ Г§ГЄГі: {FFA500} /pod", -1)
   end
 
 
@@ -74,29 +74,29 @@ thread:run("gid", arg)
     if option == "gdelay" then
       mainIni.settings.delay = arg
       inicfg.save(mainIni, 'givemoney')
-      sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} Задержка успешно применена", -1)
+      sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} Г‡Г Г¤ГҐГ°Г¦ГЄГ  ГіГ±ГЇГҐГёГ­Г® ГЇГ°ГЁГ¬ГҐГ­ГҐГ­Г ", -1)
     end
     if option == "credits" then
-      sampAddChatMessage("{00AAFF}[ГовноКодер]{FFFFFF} ngpyt, собственно обычный микрочелик, который создал этот скрипт и хочет показать миру свое бесполезное детище", -1)
+      sampAddChatMessage("{00AAFF}[ГѓГ®ГўГ­Г®ГЉГ®Г¤ГҐГ°]{FFFFFF} ngpyt, Г±Г®ГЎГ±ГІГўГҐГ­Г­Г® Г®ГЎГ»Г·Г­Г»Г© Г¬ГЁГЄГ°Г®Г·ГҐГ«ГЁГЄ, ГЄГ®ГІГ®Г°Г»Г© Г±Г®Г§Г¤Г Г« ГЅГІГ®ГІ Г±ГЄГ°ГЁГЇГІ ГЁ ГµГ®Г·ГҐГІ ГЇГ®ГЄГ Г§Г ГІГј Г¬ГЁГ°Гі Г±ГўГ®ГҐ ГЎГҐГ±ГЇГ®Г«ГҐГ§Г­Г®ГҐ Г¤ГҐГІГЁГ№ГҐ", -1)
     end
     if option == "gid" then
       mainIni.settings.id = arg
       inicfg.save(mainIni, 'givemoney')
-      sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} ID успешно применен", -1)
+      sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} ID ГіГ±ГЇГҐГёГ­Г® ГЇГ°ГЁГ¬ГҐГ­ГҐГ­", -1)
     end
     if option == "gmoney" then
       mainIni.settings.summa = arg
       inicfg.save(mainIni, 'givemoney')
-      sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} Сумма успешно применена", -1)
+      sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} Г‘ГіГ¬Г¬Г  ГіГ±ГЇГҐГёГ­Г® ГЇГ°ГЁГ¬ГҐГ­ГҐГ­Г ", -1)
     end
             if option == "pod" then
               if mainIni.settings.mode == 1 then
-                sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} Подсказка была отключена", -1)
+                sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  ГЎГ»Г«Г  Г®ГІГЄГ«ГѕГ·ГҐГ­Г ", -1)
                 mainIni.settings.mode = 0
                 inicfg.save(mainIni, 'givemoney')
               else
                 if mainIni.settings.mode == 0 then
-                  sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} Подсказка была включена", -1)
+                  sampAddChatMessage("{00AAFF}[givemoney]{FFFFFF} ГЏГ®Г¤Г±ГЄГ Г§ГЄГ  ГЎГ»Г«Г  ГўГЄГ«ГѕГ·ГҐГ­Г ", -1)
                   mainIni.settings.mode = 1
                   inicfg.save(mainIni, 'givemoney')
             end
